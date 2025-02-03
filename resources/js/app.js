@@ -1,0 +1,16 @@
+import './bootstrap.js';
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router.js';
+import store from './store/index.js';
+import '../css/app.css';
+import VueTelInput from 'vue-tel-input';
+import 'vue-tel-input/vue-tel-input.css';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+const app = createApp(App);
+app.use(store);
+app.use(router);
+app.use(VueTelInput);
+app.use(VueSweetalert2);
+app.mount('#app');
